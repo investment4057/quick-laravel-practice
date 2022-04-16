@@ -8,13 +8,15 @@
 <body>
     <table class="table">
         <tr>
+            <th>No</th>
             <th>書名</th>
             <th>価格</th>
             <th>出版社</th>
             <th>刊行日</th>
         </tr>
-        @foreach ($records as $record)
+        @foreach ($records as $id => $record)
             <tr>
+                <th>{{ $id + 1 }}</th>
                 <th>{{ $record->title }}</th>
                 <th>{{ $record->price }}</th>
                 <th>{{ $record->publisher }}</th>
