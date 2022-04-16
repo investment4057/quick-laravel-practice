@@ -28,5 +28,5 @@ Route::prefix('members')->group(function() {
     Route::get('article', 'RouteController@article');
 });
 Route::redirect('/hoge', '/', 301);
-Route::resource('articles', ArticleController);
+// Route::resource('articles', ArticleController);
     // ->except(['edit','update']);
