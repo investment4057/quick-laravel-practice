@@ -19,3 +19,6 @@ Route::get('hello', 'HelloController@index');
 Route::get('hello/view', 'HelloController@view');
 Route::get('hello/list', 'HelloController@list');
 Route::get('comp', 'ViewController@comp');
+Route::get('route/param/{id}','RouteController@param')
+    // 2〜3桁の表現
+    ->where([ 'id' => '[0-9]{2,3}']);
